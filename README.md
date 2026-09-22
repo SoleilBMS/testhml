@@ -16,7 +16,27 @@ prompt engineering (TCREI, OPRO) et maîtrise de Copilot Microsoft 365.
 2. **Source** : `Deploy from a branch`
 3. **Branch** : sélectionner la branche puis `/ (root)` → **Save**
 
-L'URL publique sera : `https://soleilbms.github.io/testhml/`
+L'URL par défaut est : `https://soleilbms.github.io/testhml/`
+
+## Domaine personnalisé
+
+Le fichier `CNAME` déclare le domaine **copilot-facile.fr**. Pour qu'il
+fonctionne, le domaine doit être acheté et les enregistrements DNS suivants
+créés chez le registrar :
+
+| Type    | Nom   | Valeur              |
+|---------|-------|---------------------|
+| `A`     | `@`   | `185.199.108.153`   |
+| `A`     | `@`   | `185.199.109.153`   |
+| `A`     | `@`   | `185.199.110.153`   |
+| `A`     | `@`   | `185.199.111.153`   |
+| `CNAME` | `www` | `soleilbms.github.io.` |
+
+Puis, dans **Settings → Pages**, cocher **Enforce HTTPS** une fois le
+certificat émis (quelques minutes à 24h après la propagation DNS).
+
+Pour changer de domaine, modifier `CNAME` (une seule ligne, sans `https://`)
+et ajuster les DNS en conséquence.
 
 ## Aperçu local
 
