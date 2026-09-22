@@ -18,25 +18,24 @@ prompt engineering (TCREI, OPRO) et maîtrise de Copilot Microsoft 365.
 
 L'URL par défaut est : `https://soleilbms.github.io/testhml/`
 
-## Domaine personnalisé
+## Domaine personnalisé (optionnel)
 
-Le fichier `CNAME` déclare le domaine **copilot-facile.fr**. Pour qu'il
-fonctionne, le domaine doit être acheté et les enregistrements DNS suivants
-créés chez le registrar :
+Le site est servi gratuitement sur `soleilbms.github.io/testhml/`.
 
-| Type    | Nom   | Valeur              |
-|---------|-------|---------------------|
-| `A`     | `@`   | `185.199.108.153`   |
-| `A`     | `@`   | `185.199.109.153`   |
-| `A`     | `@`   | `185.199.110.153`   |
-| `A`     | `@`   | `185.199.111.153`   |
+Pour brancher un domaine à soi plus tard : acheter le domaine, créer un
+fichier `CNAME` à la racine contenant uniquement le domaine (une ligne, sans
+`https://`), puis créer ces enregistrements DNS chez le registrar :
+
+| Type    | Nom   | Valeur                 |
+|---------|-------|------------------------|
+| `A`     | `@`   | `185.199.108.153`      |
+| `A`     | `@`   | `185.199.109.153`      |
+| `A`     | `@`   | `185.199.110.153`      |
+| `A`     | `@`   | `185.199.111.153`      |
 | `CNAME` | `www` | `soleilbms.github.io.` |
 
-Puis, dans **Settings → Pages**, cocher **Enforce HTTPS** une fois le
-certificat émis (quelques minutes à 24h après la propagation DNS).
-
-Pour changer de domaine, modifier `CNAME` (une seule ligne, sans `https://`)
-et ajuster les DNS en conséquence.
+Ne pas committer de `CNAME` tant que le domaine n'est pas acheté : Pages
+redirigerait l'URL github.io vers un domaine inexistant.
 
 ## Aperçu local
 
